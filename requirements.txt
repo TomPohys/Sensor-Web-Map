@@ -1,0 +1,4 @@
+flask==0.10.1
+vincent==0.4.4
+folium==0.2.1
+psycopg2==2.6.1

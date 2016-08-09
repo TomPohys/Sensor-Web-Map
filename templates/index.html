@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>IGA- Sensor map</title>
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.css">
+
+  </head>
+  <body>
+
+    <form action="/" method="get" class = 'bootstrap-frm'>
+      <span><h1>CHOOSE</h1></span>
+      <label>
+      <span>Day:</span>
+        <select name="date"><br>
+          {% for date in dates %}
+            <option value = '{{date}}'> {{date}}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+      <span>Month:</span>
+        <select name="months">
+          {% for month in months %}
+            <option value = '{{month}}'> {{month}}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+      <span>Duration:</span>
+        <select name="duration">
+          <option value = '0'> 1 day</option>
+          <option value = '7'> 1 week</option>
+          <option value = '30'> 1 month</option>
+        </select>
+      </label>
+      <label>
+      <span>Phenomenon:</span>
+        <select name="phenom"><br>
+          {% for p in phenom %}
+            <option value = '{{p}}'> {{p}}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <input type="submit" class = 'button' value="search" />
+
+    </form>
+
+  </body>
+</html>
